@@ -1,0 +1,31 @@
+<form (ngSubmit)="onUserFormSubmit(form.value)" #form="ngForm">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First name</mat-label>
+                    <input required ngModel name="name" matInput>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input required ngModel name="surname" matInput>
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Age</mat-label>
+        <input required ngModel name="age" type="number" matInput>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input required ngModel name="email" type="email" matInput>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input required ngModel name="phoneNum" matInput>
+    </mat-form-field>
+    <button [disabled]="form.invalid" type="submit" mat-raised-button color="primary">Submit</button>
+</form>

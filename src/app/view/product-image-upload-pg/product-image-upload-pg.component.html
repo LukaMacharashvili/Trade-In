@@ -1,0 +1,36 @@
+<h1>Upload Product Images</h1>
+<section>
+    <input (change)="onImageUpload($event)" (change)="imageInp.value = ''" #imageInp type="file" class="d-none">
+    <div (click)="onImageUploadDivClick(imageInp, 'front')">
+        <h2 *ngIf="!images.front">Front</h2>
+        <img *ngIf="images.front" [src]="images.front">
+    </div>
+    <div (click)="onImageUploadDivClick(imageInp, 'back')">
+        <h2 *ngIf="!images.back">Back</h2>
+        <img *ngIf="images.back" [src]="images.back">
+    </div>
+    <div (click)="onImageUploadDivClick(imageInp, 'left')">
+        <h2 *ngIf="!images.left">Left</h2>
+        <img *ngIf="images.left" [src]="images.left">
+    </div>
+    <div (click)="onImageUploadDivClick(imageInp, 'right')">
+        <h2 *ngIf="!images.right">Right</h2>
+        <img *ngIf="images.right" [src]="images.right">
+    </div>
+    <div (click)="onImageUploadDivClick(imageInp, 'top')">
+        <h2 *ngIf="!images.top">Top</h2>
+        <img *ngIf="images.top" [src]="images.top">
+    </div>
+    <div (click)="onImageUploadDivClick(imageInp, 'bottom')">
+        <h2 *ngIf="!images.bottom">Bottom</h2>
+        <img *ngIf="images.bottom" [src]="images.bottom">
+    </div>
+</section>
+<button [ngStyle]="{
+    'width': '80%',
+    'margin-top': '20px'
+}" (click)="onCancelBtnClick()" mat-raised-button color="warn">Cancel</button>
+<button [ngStyle]="{
+    'width': '80%',
+    'margin-top': '20px'
+}" [disabled]="!disabledSubmitBtn" (click)="onImagesFormSubmit()" mat-raised-button color="primary">Submit</button>

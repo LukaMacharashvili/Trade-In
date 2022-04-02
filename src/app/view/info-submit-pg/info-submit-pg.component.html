@@ -1,0 +1,122 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">User</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Name</th>
+            <td>{{user.name}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Surname</th>
+            <td>{{user.surname}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Age</th>
+            <td>{{user.age}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Phone Number</th>
+            <td>{{user.phoneNum}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table *ngIf="product.productType == 'car'" class="table">
+    <thead>
+        <tr>
+            <th scope="col">Car</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Brand</th>
+            <td>{{product.brand}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Model</th>
+            <td>{{product.model}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Year</th>
+            <td>{{product.year}}</td>
+        </tr>
+        <tr>
+            <th scope="row">VinCode</th>
+            <td>{{product.vincode}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Run</th>
+            <td>{{product.run}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Gas Type</th>
+            <td>{{product.gasType}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table *ngIf="product.productType == 'tech'" class="table">
+    <thead>
+        <tr>
+            <th scope="col">Tech</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Brand</th>
+            <td>{{product.brand}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Model</th>
+            <td>{{product.model}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Year</th>
+            <td>{{product.year}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Previous Price</th>
+            <td>{{product.prePrice}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Condition</th>
+            <td>{{product.condition}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<section>
+    <div>
+        <img [src]="images.front">
+    </div>
+    <div>
+        <img [src]="images.back">
+    </div>
+    <div>
+        <img [src]="images.left">
+    </div>
+    <div>
+        <img [src]="images.right">
+    </div>
+    <div>
+        <img [src]="images.top">
+    </div>
+    <div>
+        <img [src]="images.bottom">
+    </div>
+</section>
+<button [ngStyle]="{
+    'width': '80%',
+    'margin-top': '20px'
+}" (click)="onCancelBtnClick()" mat-raised-button color="warn">Cancel</button>
+<button [ngStyle]="{
+    'width': '80%',
+    'margin-top': '20px'
+}" (click)="onFullTradeInDataSubmit()" mat-raised-button color="primary">Submit</button>
