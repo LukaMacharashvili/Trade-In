@@ -5,16 +5,16 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyDNEw3_H7mgXu14bs2sryGS_R9Psy0GdNo",
-    authDomain: "product-uploader-4c0f4.firebaseapp.com",
-    databaseURL: "https://product-uploader-4c0f4-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "product-uploader-4c0f4",
-    storageBucket: "product-uploader-4c0f4.appspot.com",
-    messagingSenderId: "352636334534",
-    appId: "1:352636334534:web:201a830768bb19bc2082c7",
-    measurementId: "G-1LNKGHLTRE"
+    apiKey: "apiKey",
+    authDomain: "authDomain",
+    databaseURL: "databaseURL",
+    projectId: "projectId",
+    storageBucket: "storageBucket",
+    messagingSenderId: "messagingSenderId",
+    appId: "appId",
+    measurementId: "measurementId"
   },
-  cloudinaryBaseUrl: 'https://api.cloudinary.com/v1_1/dr9pyz8sz/upload'
+  cloudinaryBaseUrl: 'cloudinaryBaseUrl'
 };
 
 /*
